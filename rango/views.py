@@ -11,7 +11,7 @@ def index(request):
     context_dict = {}
     context_dict['boldmessage'] = 'Crunchy, creamy, cookie, cand, cupcake!'
     context_dict['categories'] = category_list
-    context_dict['most_viewed_pages'] = most_viewed_pages
+    context_dict['pages'] = most_viewed_pages
 
     return render(request, 'rango/index.html', context=context_dict)
 
