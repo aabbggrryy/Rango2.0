@@ -11,13 +11,15 @@
             {% if category %}
             <h1>{{ category.name }}</h1>
             {% if pages %}
-            <ul>
-                {% for page in pages %}
-                    <lwi><a href="{{ page.url }}">{{ page.title }}</a></lwi>
-                {% endfor %}
-            </ul>
+                <ul>
+                    {% for page in pages %}
+                        <li>
+                            <a href="{{ page.url }}">{{ page.title }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
             {% else %}
-            <strong>No pages currently in category.</strong>
+                <strong>No pages currently in category.</strong>
             {% endif %}
         {% else %}
             The specified category does not exist.
