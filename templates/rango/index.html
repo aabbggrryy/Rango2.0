@@ -30,6 +30,20 @@
         </div>
 
         <div>
+            {% if most_viewed_pages %}
+            <ul>
+                {% for page in most_viewed_pages %}
+                <li>
+                    <a href = '/rango/page/{{ page.url }}/'>{{ page.title }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+            {% else %}
+            <strong>There are no pages present.</strong>
+            {% endif %}
+        </div>
+
+        <div>
             <a href="/rango/about/">About</a><br />
             <img src="{% static 'images/rango.jpg' %}" alt="Picture of Rango" />
         </div>
